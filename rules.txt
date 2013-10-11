@@ -25,13 +25,19 @@ How a turn occurs:
 	A player can choose to:
 		-Pick up 2 cards from the stock 
 	or
-		-Pick up the discard pile (see conditions below)
+		-Pick up the discard pile (see conditions [p] below)
 
+	Then:
+	
 	Play down any cards in your hand on the melds (see meld rules)
-	Finish by discarding a card, if it was the last card, then the
-		player may perform "Looking" described below.
+	
 	At any time, if all cards in the players hand are played AND a
-	foot exists, the player may perform "Playing in".
+	foot exists, the player performs "Playing in".
+	
+	Finish Turn:
+
+	The player finishes by discarding a card, if it was the last
+	card, then the player may perform "Looking" described below.
 
 	After the turn completes, the next player is picked from the opposing
 	team in the same order thereafter.
@@ -70,7 +76,7 @@ A meld must contain cards of the same rank.
 Valid ranks for melds/canastas are:
 A,4,5,6,7,8,9,j,q,k
 
-Picking up the discard pile: 
+[p] Picking up the discard pile: 
 	The discard pile may only be taken by a player having a natural
 	pair matching the upcard (the top card showing on the discard
 	pile), or if they're able to add the upcard to an existing
@@ -117,10 +123,10 @@ A game is played until one Team achieves a score above a threshold
 
 Playing Down:
 This corresponds to conditions under which the initial placement of any
-cards into the meld set may happen.  This is for the FIRST time any meld
-get put down. After the first meld is down, the point limit vanishes.
+cards into the meld set may happen.  This is for the FIRST time any meld-set
+gets put down. After the first meld-set is down, the point limit vanishes.
 
-The initial meld requirements for a team is based on a team's score (can 
+The initial meld-set requirements for a team is based on a team's score (can 
 be varied based on the game threshold.. in this case for 10000): 
 0-2500 50pts
 2501-5000 90pts 
@@ -136,18 +142,23 @@ What does the game display look like?
 Stock:		large
 Discard:	3H medium
 
+<<[] means clean meld, {} means dirty meld>>
+<< number is rank, + means it has 7 cards, * means 7 cards with a red 3>>
+
 +---
 | Team 1 [NNNN]: Ken 3/11 & Jenn 23/11
-|    +[4] +{5} *[7]
+| R  +[4] +{5} *[7]
 | C    7    4    8
-| D         3
+| 2         2
+| J         1
 +---
 
 +---
 | Team 2 [MMMMM]: Pete 10/11 & Steph 9/X
-|    [5]  {7}  [9] 
+| R  [5]  {7}  [9] 
 | C   3    4    2
-| D        1
+| 2        1
+| J
 +---
 
 +---
@@ -160,10 +171,9 @@ Discard:	3H medium
 Turn: Ken [Pete] Jenn Steph
 
         Hand*         <--- asterisk is here until you pick
-  a   b   c    d   e
-A(2) 3R 3B(2) 7(4) K(4)
+A(2)    3R(1)   3B(2)   7(4)   K(4)
 
->  (p d)
+>  (p 3R)
 
 [If upcard has an ambiguous placement, then ask the player in what rank it
 should be placed]:
